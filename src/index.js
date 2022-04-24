@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter ,Routes, Route} from "react-router-dom";
+import {HashRouter ,Routes, Route} from "react-router-dom";
 import Contact from './Screens/Contact';
 import Portfolio from './Screens/productList/Portfolio';
 import NavBar from './Navigation/Nav';
@@ -12,14 +12,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
         <NavBar/>
   <Routes>
     <Route path="/" element={ <App />} />
     <Route path="/contact" element={<Contact/>} />
     <Route path="/Portfolio" element={<Portfolio />} />
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById('root')
 );
 
